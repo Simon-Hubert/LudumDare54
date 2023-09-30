@@ -157,9 +157,9 @@ MonoBehaviour:
   m_centerPoint: {fileID: 1628998851}
   m_playerTransform: {fileID: 701752522}
   lineRenderer: {fileID: 94502970}
-  m_SegmentLen: 0.4
-  m_numberOfSegments: 12
-  DEBUG_LENGTH: 11
+  m_SegmentLen: 0.5
+  m_numberOfSegments: 11
+  DEBUG_LENGTH: 10
 --- !u!120 &94502970
 LineRenderer:
   serializedVersion: 2
@@ -290,6 +290,8 @@ GameObject:
   - component: {fileID: 701752521}
   - component: {fileID: 701752523}
   - component: {fileID: 701752524}
+  - component: {fileID: 701752526}
+  - component: {fileID: 701752525}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -416,6 +418,50 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &701752525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701752520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: ab0e2cd0d1b2f9f4e90fd925e0665e2e, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerMap
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &701752526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701752520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c5fa14c0b56de489f8faceddf8da12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_moveSpeed: 50
+  m_inputMovement: {fileID: 1956306896325409086, guid: ab0e2cd0d1b2f9f4e90fd925e0665e2e, type: 3}
 --- !u!1 &992845367
 GameObject:
   m_ObjectHideFlags: 0

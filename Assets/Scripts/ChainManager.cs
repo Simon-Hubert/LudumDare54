@@ -29,7 +29,7 @@ public class ChainManager : MonoBehaviour
     {
         //Contraintes
 
-        m_chainSegments[m_chainSegments.Count - 1].position = m_playerTransform.position;
+        //m_chainSegments[m_chainSegments.Count - 1].position = m_playerTransform.position;
 
         for (int i = 0; i < m_numberOfSegments + 1; i++)
         {
