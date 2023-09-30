@@ -49,8 +49,8 @@ MonoBehaviour:
   m_centerPoint: {fileID: 0}
   m_playerTransform: {fileID: 0}
   lineRenderer: {fileID: 1373066300767843921}
-  m_SegmentLen: 0.4
-  m_numberOfSegments: 12
+  m_SegmentLen: 0.5
+  m_numberOfSegments: 9
   DEBUG_LENGTH: 11
 --- !u!120 &1373066300767843921
 LineRenderer:

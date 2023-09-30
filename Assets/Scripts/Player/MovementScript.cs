@@ -18,7 +18,6 @@ public class MovementScript : MonoBehaviour
         Vector2 moveInput = m_inputMovement.action.ReadValue<Vector2>();
         Vector2 currentPosition = transform.position;
 
-
         if (moveInput != Vector2.zero)
         {
             m_rb.MovePosition(currentPosition + moveInput * m_moveSpeed * Time.deltaTime);
@@ -32,6 +31,5 @@ public class MovementScript : MonoBehaviour
             m_visualTransform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
 
         }
-
     }
 }
