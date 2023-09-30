@@ -119,8 +119,6 @@ public class ChainManager : MonoBehaviour
             //T'inquiète...
             Vector3 chainPointDir = m_playerTransform.position - m_centerPoint.position;
             chainPointDir.Normalize();
-            print(chainPointDir);
-
             chainStartPoint += m_SegmentLen * chainPointDir;
         }
 
