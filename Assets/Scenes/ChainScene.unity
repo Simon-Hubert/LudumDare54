@@ -159,7 +159,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 94502970}
   m_SegmentLen: 0.4
   m_numberOfSegments: 12
-  DEBUG_LENGTH: 0
+  DEBUG_LENGTH: 11
 --- !u!120 &94502970
 LineRenderer:
   serializedVersion: 2
