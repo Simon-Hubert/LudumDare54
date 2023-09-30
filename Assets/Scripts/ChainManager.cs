@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class ChainManager : MonoBehaviour
 {
     private List<Transform> m_chainSegments = new List<Transform>();
     [SerializeField] GameObject m_ChainPrefab;
+    [SerializeField] Transform m_centerPoint;
+    [SerializeField] Transform m_playerTransform;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float m_SegmentLen;
     [SerializeField] private int m_numberOfSegments;
+
+    public int numberOfSegments { get => m_numberOfSegments; }
 
     private void Reset()
     {
@@ -17,54 +22,26 @@ public class ChainManager : MonoBehaviour
 
     void Awake()
     {
-        // Création de la chaine
-
-        Vector3 chainStartPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Rigidbody2D old_rb = null;
-        for (int i = 0; i < m_numberOfSegments; i++)
-        {
-            GameObject newChainObject = Instantiate(m_ChainPrefab, chainStartPoint, Quaternion.identity);
-            
-            if(old_rb != null) 
-            {
-                newChainObject.GetComponent<HingeJoint2D>().connectedBody = old_rb;
-            }         
-            old_rb = newChainObject.GetComponent<Rigidbody2D>();
-
-            m_chainSegments.Add(newChainObject.transform);
-            chainStartPoint.y -= m_SegmentLen;
-        }
+        ChangeLength(m_numberOfSegments);
     }
 
     private void Update()
     {
-        //Display Chain
-
-        for (int i = 0;i < m_numberOfSegments; i++)
-        {
-            lineRenderer.SetPosition(i, m_chainSegments[i].position);
-        }
-
-    }
-
-    private void FixedUpdate()
-    {
         //Contraintes
 
-        m_chainSegments[0].position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        m_chainSegments[m_chainSegments.Count - 1].position = m_playerTransform.position;
 
-        for (int i = 0; i < m_numberOfSegments; i++)
+        for (int i = 0; i < m_numberOfSegments + 1; i++)
         {
             Transform firstSegment = m_chainSegments[0];
-            firstSegment.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            firstSegment.position = m_centerPoint.position;
             m_chainSegments[0] = firstSegment;
 
-            for (int j = 0; j < m_numberOfSegments - 1; j++)
+            for (int j = 0; j < m_numberOfSegments; j++)
             {
                 Transform m_currentSegment = m_chainSegments[j];
                 Transform m_nextSegment = m_chainSegments[j + 1];
-                
+
                 float dist = (m_currentSegment.position - m_nextSegment.position).magnitude;
                 float error = Mathf.Abs(dist - m_SegmentLen);
 
@@ -93,8 +70,67 @@ public class ChainManager : MonoBehaviour
 
                     m_chainSegments[j + 1] = m_nextSegment;
                 }
-                
+
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        //Display Chain
+
+        for (int i = 0; i < m_numberOfSegments + 1; i++)
+        {
+            lineRenderer.SetPosition(i, m_chainSegments[i].position);
+        }
+    }
+
+    [Header("Debug")]
+    [SerializeField] int DEBUG_LENGTH;
+    [Button] void DEBUG_ChangeLength() => ChangeLength(DEBUG_LENGTH);
+
+    public void ChangeLength(int newLength)
+    {
+        if(m_chainSegments.Count != 0) // Clear list
+        {
+            foreach (Transform transform in m_chainSegments)
+            {
+                if(transform.gameObject.tag != "Player") Destroy(transform.gameObject);
+            }
+            m_chainSegments.Clear();
+        }
+
+        // Création de la chaine
+
+        Vector3 chainStartPoint = m_centerPoint.position;
+
+
+        Rigidbody2D old_rb = null;
+        for (int i = 0; i < newLength; i++)
+        {
+            GameObject newChainObject = Instantiate(m_ChainPrefab, chainStartPoint, Quaternion.identity);
+
+            if (old_rb != null)
+            {
+                newChainObject.GetComponent<HingeJoint2D>().connectedBody = old_rb;
+            }
+            old_rb = newChainObject.GetComponent<Rigidbody2D>();
+
+            m_chainSegments.Add(newChainObject.transform);
+
+            //Détermination de la direction de création des points de chaines
+            //T'inquiète...
+            Vector3 chainPointDir = m_playerTransform.position - m_centerPoint.position;
+            chainPointDir.Normalize();
+            print(chainPointDir);
+
+            chainStartPoint += m_SegmentLen * chainPointDir;
+        }
+
+        m_chainSegments.Add(m_playerTransform);
+        m_playerTransform.GetComponent<HingeJoint2D>().connectedBody = old_rb;
+
+        lineRenderer.positionCount = newLength + 1;
+        m_numberOfSegments = newLength;
     }
 }
