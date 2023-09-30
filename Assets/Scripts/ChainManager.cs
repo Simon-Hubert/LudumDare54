@@ -124,6 +124,7 @@ public class ChainManager : MonoBehaviour
 
         m_chainSegments.Add(m_playerTransform);
         m_playerTransform.GetComponent<HingeJoint2D>().connectedBody = old_rb;
+        m_playerTransform.position = chainStartPoint;
 
         lineRenderer.positionCount = newLength + 1;
         m_numberOfSegments = newLength;
