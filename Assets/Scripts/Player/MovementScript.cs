@@ -22,11 +22,11 @@ public class MovementScript : MonoBehaviour
         {
             m_rb.MovePosition(currentPosition + moveInput * m_moveSpeed * Time.deltaTime);
 
-
-            Vector2 direction = m_center.position - transform.position;//Get the direction and distance.
-            float dist = direction.magnitude;//Get the distance first
-            direction.Normalize();//Turn it into an actual direction vector.
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;//Atan2 gives the angle in radians, Unity works in degrees.
+            //Regarde tour
+            Vector2 direction = m_center.position - transform.position;
+            float dist = direction.magnitude;
+            direction.Normalize();
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             m_visualTransform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
 
