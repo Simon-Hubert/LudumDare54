@@ -157,9 +157,9 @@ MonoBehaviour:
   m_centerPoint: {fileID: 1628998851}
   m_playerTransform: {fileID: 701752522}
   lineRenderer: {fileID: 94502970}
-  m_SegmentLen: 0.5
-  m_numberOfSegments: 11
-  DEBUG_LENGTH: 10
+  m_SegmentLen: 0.7
+  m_numberOfSegments: 10
+  DEBUG_LENGTH: 9
 --- !u!120 &94502970
 LineRenderer:
   serializedVersion: 2
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c5fa14c0b56de489f8faceddf8da12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_moveSpeed: 50
+  m_moveSpeed: 60
   m_inputMovement: {fileID: 1956306896325409086, guid: ab0e2cd0d1b2f9f4e90fd925e0665e2e, type: 3}
 --- !u!1 &992845367
 GameObject:
@@ -524,7 +524,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
