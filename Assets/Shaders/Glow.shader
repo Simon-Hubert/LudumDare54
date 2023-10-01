@@ -1,64 +1,63 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
 Shader "Unlit/Glow"
 {
     Properties
     {
-        _MainTex ("NoiseTexture", 2D) = "white" {}
+        _MainTex ("Texture", 2D) = "white" {}
+        _NoiseTex ("Noise Texture", 2D) = "white" {}
+        _Threshold ("Glow Threshold", Range(0,1)) = .45
     }
+
+    CGINCLUDE
+    #pragma vertex vert
+    #pragma fragment frag
+
+    #include "UnityCG.cginc"
+
+    struct appdata
+    {
+        float4 vertex : POSITION;
+        float2 uv : TEXCOORD0;
+    };
+
+    struct v2f
+    {
+        float2 uv : TEXCOORD0;
+        float4 vertex : SV_POSITION;
+    };
+
+    sampler2D _MainTex;
+    sampler2D _NoiseTex;
+    float _Threshold;
+
+
+    v2f vert (appdata v)
+    {
+        v2f o;
+        o.vertex = UnityObjectToClipPos(v.vertex);
+        o.uv = v.uv;
+        return o;
+    }
+    ENDCG
+
     SubShader
     {
-        Tags {
-            "RenderType"="Opaque"
-            "Queue" = "Transparent+1"
-        }
+        Cull Off ZWrite Off ZTest Always
+        Blend SrcAlpha OneMinusSrcAlpha
+        Tags { "RenderType"="Opaque" }
         LOD 100
 
         Pass
         {
-            ZWrite Off
-            //Blend SrcAlpha OneMinusSrcAlpha
-
             CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #include "UnityCG.cginc"
-
-            struct Vertex
+            fixed4 frag (v2f i) : SV_Target
             {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-                float2 uv2 : TEXCOORD1;
-            };
-
-            struct Fragment
-            {
-                float4 vertex : SV_POSITION;
-                float2 uv : TEXCOORD0;
-                float2 uv2 : TEXCOORD1;
-            };
-
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-
-            Fragment vert (Vertex v)
-            {
-                Fragment o;
-                
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
-                o.uv2 = v.uv2;
-
-                return o;
-            }
-
-            fixed4 frag (Fragment i) : COLOR//SV_Target
-            {
-                fixed4 col = tex2D(_MainTex, i.uv);
-                float mask = (col.r-.45);
+                half4 col = tex2D(_MainTex, i.uv); // Obtenir la couleur du sprite
+                half4 noise = tex2D(_NoiseTex, i.uv + float2(0.75*_Time.x, 0.75*_Time.x));
+                float mask = col.r -_Threshold;
                 mask = mask > 0;
-
-                return fixed4(mask*1.5, mask*1.5, mask*1.5,1);
+                mask*= noise.r+.5;
+                
+                return col + col*mask ;// + mask;
             }
             ENDCG
         }
