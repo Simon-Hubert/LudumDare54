@@ -55,6 +55,8 @@ public class FlameThrowerManager : MonoBehaviour
         if (flames != 0) StartCoroutine(WaitToActivate(m_activationTime));
     }
 
+    public void ChangeSpeed(float value) => m_turnSpeed = value;
+
     [Button]
     void DEBUG_ACTIVE() => ActivateFlames(1);
     [Button]
