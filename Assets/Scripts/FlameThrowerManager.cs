@@ -8,14 +8,15 @@ public class FlameThrowerManager : MonoBehaviour
     [SerializeField] GameObject m_FlameObject;
     [SerializeField] float m_turnSpeed;
     [SerializeField] float m_flameDelay;
+    [SerializeField] float m_activationTime;
     bool m_throwerActive;
 
     [SerializeField] List<GameObject> m_flamesObjects;
+    [SerializeField] List<GameObject> m_warningObjects;
     public List<bool> m_flamesActive;
 
     public bool throwerActive { get => m_throwerActive; set => m_throwerActive = value; }
 
-    private void OnEnable() => StartCoroutine(WaitForFlame(m_flameDelay));
     private void OnDisable() => StopAllCoroutines();
 
     private void FixedUpdate()
@@ -28,13 +29,12 @@ public class FlameThrowerManager : MonoBehaviour
 
     public void ActivateFlames(bool active)
     {
-        m_throwerActive = active;
-        if (m_throwerActive)
+
+        if (active)
         {
-            for (int i = 0; i < m_flamesObjects.Count; i++)
-            {
-                m_flamesObjects[i].SetActive(m_flamesActive[i]);
-            }
+            m_throwerActive = true;
+            for (int i = 0; i < m_flamesObjects.Count; i++) m_warningObjects[i].SetActive((m_flamesActive[i]));
+            StartCoroutine(WaitToActivate(m_activationTime));
         }
         else
         {
@@ -47,10 +47,11 @@ public class FlameThrowerManager : MonoBehaviour
     [Button]
     void DEBUG_DEACTIVE() => ActivateFlames(false);
 
-    IEnumerator WaitForFlame(float m_time)
+    IEnumerator WaitToActivate(float m_time)
     {
         yield return new WaitForSeconds(m_time);
 
-        StartCoroutine(WaitForFlame(m_time));
+        for (int i = 0; i < m_flamesObjects.Count; i++) m_flamesObjects[i].SetActive(m_flamesActive[i]);
+        foreach (GameObject obj in m_warningObjects) obj.SetActive(false);
     }
 }
