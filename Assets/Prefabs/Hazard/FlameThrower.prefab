@@ -998,8 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FlameObject: {fileID: 5464457688471943911}
-  m_turnSpeed: -60
-  m_flameDelay: 2
+  m_turnSpeed: 0
   m_activationTime: 2
   m_flamesObjects:
   - {fileID: 5464457688471943911}
