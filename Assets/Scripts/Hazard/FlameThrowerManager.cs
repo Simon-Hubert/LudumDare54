@@ -10,22 +10,16 @@ public class FlameThrowerManager : MonoBehaviour
     [SerializeField] GameObject m_FlameObject;
     [SerializeField] float m_turnSpeed;
     [SerializeField] float m_activationTime;
-    bool m_throwerActive;
 
     [SerializeField] List<GameObject> m_flamesObjects;
     [SerializeField] List<GameObject> m_warningObjects;
     bool[] m_flamesActive = new bool[4];
 
-    public bool throwerActive { get => m_throwerActive; set => m_throwerActive = value; }
-
     private void OnDisable() => StopAllCoroutines();
 
     private void FixedUpdate()
     {
-        if (m_throwerActive)
-        {
-            transform.Rotate(new Vector3(0f, 0f, m_turnSpeed * Time.deltaTime));   
-        }
+        transform.Rotate(new Vector3(0f, 0f, m_turnSpeed * Time.deltaTime));
     }
 
     public void ActivateFlames(int flames)
@@ -52,7 +46,6 @@ public class FlameThrowerManager : MonoBehaviour
     }
 
     public void ChangeSpeed(float value) => m_turnSpeed = value;
-    public void ChangeTurn(bool value) => m_throwerActive = value;
     [Button]
     void DEBUG_ACTIVE() => ActivateFlames(1);
     [Button]
