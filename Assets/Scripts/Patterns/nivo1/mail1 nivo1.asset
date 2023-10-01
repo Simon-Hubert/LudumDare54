@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: mail1 nivo1
   m_EditorClassIdentifier: 
   _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
-  _numberProjectile: 16
+  _numberProjectile: 8
   _projectileSpeed: 2
   _projectileDelay: 0
   _projectileAngle: 360

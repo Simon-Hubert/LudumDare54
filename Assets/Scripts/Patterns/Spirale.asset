@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2371cafe04a0004d8cd470a8c7bef7c, type: 3}
-  m_Name: mail2 nivo1
+  m_Name: Spirale
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
-  _numberProjectile: 8
-  _projectileSpeed: 2
-  _projectileDelay: 0
+  _projectile: {fileID: 0}
+  _numberProjectile: 20
+  _projectileSpeed: 4
+  _projectileDelay: 0.04
   _projectileAngle: 360
-  _projectileAngleOffset: 22.5
-  _compositePattern: []
+  _projectileAngleOffset: 0
+  _compositePattern:
+  - {fileID: 11400000, guid: 3b586730966ab4b4daa9d883da6d6f75, type: 2}
