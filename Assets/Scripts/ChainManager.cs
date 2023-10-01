@@ -8,8 +8,8 @@ public class ChainManager : MonoBehaviour
     private List<Transform> m_chainSegments = new List<Transform>();
     [SerializeField] GameObject m_ChainPrefab;
     [SerializeField] Transform m_centerPoint;
-    [SerializeField] Transform m_playerTransform;
-    [SerializeField] Transform m_playerGameObjectTransform;
+    [SerializeField] Transform m_playeRopeTransform;
+    [SerializeField] Transform m_playertTransform;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float m_SegmentLen;
     [SerializeField] private int m_numberOfSegments;
@@ -111,15 +111,15 @@ public class ChainManager : MonoBehaviour
 
             //Détermination de la direction de création des points de chaines
             //T'inquiète...
-            Vector3 chainPointDir = m_playerTransform.position - m_centerPoint.position;
+            Vector3 chainPointDir = m_playeRopeTransform.position - m_centerPoint.position;
             chainPointDir.Normalize();
             chainStartPoint += m_SegmentLen * chainPointDir;
         }
 
-        m_chainSegments.Add(m_playerTransform);
-        m_playerTransform.GetComponent<HingeJoint2D>().connectedBody = old_rb;
-        m_playerTransform.position = chainStartPoint;
-        m_playerGameObjectTransform.position = chainStartPoint;
+        m_chainSegments.Add(m_playeRopeTransform);
+        m_playeRopeTransform.GetComponent<HingeJoint2D>().connectedBody = old_rb;
+        m_playeRopeTransform.position = chainStartPoint;
+        m_playertTransform.position = chainStartPoint;
 
         lineRenderer.positionCount = newLength + 1;
         m_numberOfSegments = newLength;
