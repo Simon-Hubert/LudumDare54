@@ -8,9 +8,13 @@ public class FallingPlatform : MonoBehaviour
     [SerializeField] SpriteRenderer m_sR;
     [SerializeField] float m_fallTime;
 
+    bool m_isFalling = false;
+    public bool IsFalling { get => m_isFalling; }
+
     public void StartFalling() => StartCoroutine(StartFall());
     public void ResetPlatform()
     {
+        m_isFalling = false;
         m_sR.enabled = true;
         transform.tag = "Untagged";
         m_sR.color = new Color(1f, 1f, 1f);
@@ -18,6 +22,8 @@ public class FallingPlatform : MonoBehaviour
 
     IEnumerator StartFall()
     {
+        m_isFalling = true;
+
         float timeElapsed = 0;
 
         while (timeElapsed < m_fallTime)
