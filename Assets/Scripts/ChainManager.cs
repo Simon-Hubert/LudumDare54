@@ -9,10 +9,11 @@ public class ChainManager : MonoBehaviour
     [SerializeField] GameObject m_ChainPrefab;
     [SerializeField] Transform m_centerPoint;
     [SerializeField] Transform m_playerTransform;
+    [SerializeField] Transform m_playerGameObjectTransform;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float m_SegmentLen;
     [SerializeField] private int m_numberOfSegments;
-
+    [SerializeField] List<GameObject> m_collisionCircles;
     public int numberOfSegments { get => m_numberOfSegments; }
 
     private void Reset()
@@ -88,17 +89,10 @@ public class ChainManager : MonoBehaviour
 
     public void ChangeLength(int newLength)
     {
-        if(m_chainSegments.Count != 0) // Clear list
-        {
-            foreach (Transform transform in m_chainSegments)
-            {
-                if(transform.gameObject.tag != "Player") Destroy(transform.gameObject);
-            }
-            m_chainSegments.Clear();
-        }
-
         // Création de la chaine
+        m_collisionCircles[m_numberOfSegments].SetActive(false);
 
+        m_chainSegments.Clear();
         Vector3 chainStartPoint = m_centerPoint.position;
 
 
@@ -125,8 +119,11 @@ public class ChainManager : MonoBehaviour
         m_chainSegments.Add(m_playerTransform);
         m_playerTransform.GetComponent<HingeJoint2D>().connectedBody = old_rb;
         m_playerTransform.position = chainStartPoint;
+        m_playerGameObjectTransform.position = chainStartPoint;
 
         lineRenderer.positionCount = newLength + 1;
         m_numberOfSegments = newLength;
+
+        m_collisionCircles[newLength].SetActive(true);
     }
 }
