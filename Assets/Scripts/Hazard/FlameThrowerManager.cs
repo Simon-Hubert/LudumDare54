@@ -9,7 +9,6 @@ public class FlameThrowerManager : MonoBehaviour
 {
     [SerializeField] GameObject m_FlameObject;
     [SerializeField] float m_turnSpeed;
-    [SerializeField] float m_flameDelay;
     [SerializeField] float m_activationTime;
     bool m_throwerActive;
 
