@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &19818368 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5652672770375241929, guid: 1610677ebbf569445a327aca2ab2d339, type: 3}
+  m_PrefabInstance: {fileID: 8132090304947295886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &108171882
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +753,7 @@ PrefabInstance:
     - target: {fileID: 3609631328554058282, guid: 5eb1346c7283f6a4fa2b01534cfc4493, type: 3}
       propertyPath: m_playerTransform
       value: 
-      objectReference: {fileID: 172389515}
+      objectReference: {fileID: 19818368}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -836,6 +841,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 421987003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.98}
+--- !u!1 &1498437767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498437769}
+  - component: {fileID: 1498437768}
+  m_Layer: 0
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!68 &1498437768
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498437767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.09820247, y: -3.581685}
+  - {x: -1.0459878, y: -3.5201368}
+  - {x: -2.1174161, y: -3.175815}
+  - {x: -3.2407846, y: -2.4671915}
+  - {x: -4.1725163, y: -1.2865167}
+  - {x: -4.6444073, y: -0.23664284}
+  - {x: -4.91297, y: 1.0978081}
+  - {x: -4.790314, y: 2.5126622}
+  - {x: -4.4531503, y: 3.2650585}
+  - {x: -3.9583602, y: 4.0538316}
+  - {x: -2.748007, y: 5.2508707}
+  - {x: -1.2478194, y: 5.8229165}
+  - {x: 0.23833871, y: 6.097361}
+  - {x: 1.1859981, y: 5.9553585}
+  - {x: 1.9144037, y: 5.698623}
+  - {x: 1.9895606, y: 5.6665783}
+  - {x: 2.3374844, y: 5.544152}
+  - {x: 2.7256336, y: 5.284027}
+  - {x: 2.7950182, y: 5.252003}
+  - {x: 2.8430538, y: 5.225317}
+  - {x: 2.8163674, y: 5.305376}
+  - {x: 2.846436, y: 5.309274}
+  - {x: 2.8590655, y: 5.2947016}
+  - {x: 2.8750947, y: 5.230638}
+  - {x: 3.653436, y: 4.545535}
+  - {x: 4.1901507, y: 3.8881516}
+  - {x: 4.67428, y: 2.8857515}
+  - {x: 4.812305, y: 2.4484527}
+  - {x: 4.8268003, y: 1.5157901}
+  - {x: 4.624177, y: -0.07449031}
+  - {x: 4.1655927, y: -1.4572351}
+  - {x: 3.17166, y: -2.4997163}
+  - {x: 1.7524244, y: -3.2624018}
+  - {x: -0.082825124, y: -3.604528}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!4 &1498437769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498437767}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.015050903, y: -1.2592988, z: -0.16552113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535439539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,3 +1308,5 @@ SceneRoots:
   - {fileID: 1913267868}
   - {fileID: 3269501417011357112}
   - {fileID: 1551363153}
+  - {fileID: 8132090304947295886}
+  - {fileID: 1498437769}

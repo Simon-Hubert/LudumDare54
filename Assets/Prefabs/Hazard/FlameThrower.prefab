@@ -402,7 +402,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.578023, y: 19.221628}
+  m_Size: {x: 1.5, y: 19.221628}
   m_EdgeRadius: 0
 --- !u!1 &5464457688471943911
 GameObject:
@@ -554,7 +554,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5797565, y: 19.309338}
+  m_Size: {x: 1.5, y: 19.309338}
   m_EdgeRadius: 0
 --- !u!1 &5602292852675949572
 GameObject:
@@ -790,7 +790,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4418478, y: 19.196806}
+  m_Size: {x: 1.5, y: 19.196806}
   m_EdgeRadius: 0
 --- !u!1 &5805119407879223071
 GameObject:
@@ -942,7 +942,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4120069, y: 19.346016}
+  m_Size: {x: 1.5, y: 19.346016}
   m_EdgeRadius: 0
 --- !u!1 &6302759891260149506
 GameObject:
@@ -1011,7 +1011,6 @@ MonoBehaviour:
   - {fileID: 1895680729596920636}
   - {fileID: 3495950432440040192}
   - {fileID: 5602292852675949572}
-  m_flamesActive: 01010101
 --- !u!1 &6613696311335240213
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class ChainManager : MonoBehaviour
     private void Update()
     {
         //Contraintes
-        for (int i = 0; i < m_numberOfSegments + 1; i++)
+        for (int i = 0; i < m_numberOfSegments; i++)
         {
             Transform firstSegment = m_chainSegments[0];
             firstSegment.position = m_centerPoint.position;
