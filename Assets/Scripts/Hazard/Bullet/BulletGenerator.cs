@@ -32,14 +32,22 @@ public class BulletGenerator : MonoBehaviour
         }
     }
 
+    // public void RandomPattern(){
+        
+    // }
+
 
     public void PlayPattern(Pattern pattern){
         StartCoroutine(PlayPatternCoroutine());
 
         IEnumerator PlayPatternCoroutine(){
-            float angleStep = pattern.ProjectileAngle / pattern.NumberProjectile;
+            float angleStep = pattern.ProjectileAngle / (pattern.NumberProjectile-1);
             float angle = pattern.ProjectileAngleOffset;
 
+            foreach (Pattern compositePattern in pattern.CompositePattern)
+            {
+                PlayPattern(compositePattern);
+            }
             for(int i = 0; i < pattern.NumberProjectile; i++){
                 Vector2 direction = new Vector2(Mathf.Sin(angle*Mathf.PI/180),Mathf.Cos(angle*Mathf.PI/180));
                 Projectile projSave = Instantiate(_projectile, transform).GetComponent<Projectile>();
@@ -49,10 +57,6 @@ public class BulletGenerator : MonoBehaviour
                     yield return new WaitForSeconds(pattern.ProjectileDelay);
                 }
                 angle += angleStep;
-            }
-            foreach (Pattern compositePattern in pattern.CompositePattern)
-            {
-                PlayPattern(compositePattern);
             }
             
         }

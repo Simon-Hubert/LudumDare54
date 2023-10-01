@@ -270,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164382152}
   - component: {fileID: 1164382151}
+  - component: {fileID: 1164382153}
   m_Layer: 0
   m_Name: BulletGenerator
   m_TagString: Untagged
@@ -289,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 762ea846cebcd4e4598f22e1b71a4abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _testPattern: {fileID: 0}
+  _testPattern: {fileID: 11400000, guid: c94ecc91e45e02d498098291a43a449c, type: 2}
   _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
   _patternCursor: 0
   _playListPatterns: []
@@ -308,6 +309,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1164382153
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164382150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72c0d127ce7228f47bd49f05c6e66034, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

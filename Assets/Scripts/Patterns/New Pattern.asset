@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: New Pattern
   m_EditorClassIdentifier: 
   _projectile: {fileID: 0}
-  _numberProjectile: 8
+  _numberProjectile: 16
   _projectileSpeed: 4
-  _projectileDelay: 0.02
-  _projectileAngle: 180
-  _projectileAngleOffset: -180
+  _projectileDelay: 0
+  _projectileAngle: 360
+  _projectileAngleOffset: 0
   _compositePattern: []

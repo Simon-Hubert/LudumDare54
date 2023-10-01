@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2371cafe04a0004d8cd470a8c7bef7c, type: 3}
   m_Name: Casino
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 0}
-  _numberProjectile: 0
-  _projectileSpeed: 0
+  _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
+  _numberProjectile: 8
+  _projectileSpeed: 2
   _projectileDelay: 0
-  _projectileAngle: 0
+  _projectileAngle: 360
   _projectileAngleOffset: 0
-  _compositePattern: []
+  _compositePattern:
+  - {fileID: 11400000, guid: acbd6a1f093dddb40ae19723dd6c6dcc, type: 2}
