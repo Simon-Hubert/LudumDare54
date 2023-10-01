@@ -51,6 +51,7 @@ public class FlameThrowerManager : MonoBehaviour
         {
             m_warningObjects[i].SetActive(binary[i] == 49 ? true : false);
         }
+        if(flames == 0) for (int i = 0; i < m_flamesObjects.Count; i++) m_flamesObjects[i].SetActive(false);
         if (flames != 0) StartCoroutine(WaitToActivate(m_activationTime));
     }
 
