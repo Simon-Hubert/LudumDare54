@@ -1,7 +1,9 @@
 using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class FlameThrowerManager : MonoBehaviour
 {
@@ -13,7 +15,7 @@ public class FlameThrowerManager : MonoBehaviour
 
     [SerializeField] List<GameObject> m_flamesObjects;
     [SerializeField] List<GameObject> m_warningObjects;
-    public List<bool> m_flamesActive;
+    bool[] m_flamesActive = new bool[4];
 
     public bool throwerActive { get => m_throwerActive; set => m_throwerActive = value; }
 
@@ -27,25 +29,27 @@ public class FlameThrowerManager : MonoBehaviour
         }
     }
 
-    public void ActivateFlames(bool active)
+    public void ActivateFlames(int flames)
     {
+        if (flames < 0 && flames > 15) throw new ArgumentException("CON DE GD cette valeur du lance-flamme est interdite");
 
-        if (active)
+        //Convertir int en binaire
+        string binary = Convert.ToString(flames, 2);
+        print(binary);
+
+        m_throwerActive = flames != 0;
+        for(int i = 0; i < 4; i++) { m_flamesActive[i] = binary[i] == 49 ? true : false; }
+        for (int i = 0; i < m_flamesObjects.Count; i++)
         {
-            m_throwerActive = true;
-            for (int i = 0; i < m_flamesObjects.Count; i++) m_warningObjects[i].SetActive((m_flamesActive[i]));
-            StartCoroutine(WaitToActivate(m_activationTime));
+            m_warningObjects[i].SetActive(binary[i] == 49 ? true : false);
         }
-        else
-        {
-            foreach(GameObject obj in m_flamesObjects) obj.SetActive(false);
-        }
+        if (flames != 0) StartCoroutine(WaitToActivate(m_activationTime));
     }
 
     [Button]
-    void DEBUG_ACTIVE() => ActivateFlames(true);
+    void DEBUG_ACTIVE() => ActivateFlames(15);
     [Button]
-    void DEBUG_DEACTIVE() => ActivateFlames(false);
+    void DEBUG_DEACTIVE() => ActivateFlames(0);
 
     IEnumerator WaitToActivate(float m_time)
     {

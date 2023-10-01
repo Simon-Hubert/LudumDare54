@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rb: {fileID: 2484411171275336004}
   m_hitScript: {fileID: 8926418938597779839}
-  m_moveSpeed: 60
+  m_moveSpeed: 7
   m_inputMovement: {fileID: 1956306896325409086, guid: ab0e2cd0d1b2f9f4e90fd925e0665e2e, type: 3}
   m_visualTransform: {fileID: 8175751246989496566}
   m_center: {fileID: 0}
