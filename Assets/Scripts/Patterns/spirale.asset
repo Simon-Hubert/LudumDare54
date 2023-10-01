@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: spirale
   m_EditorClassIdentifier: 
   _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
-  _numberProjectile: 36
+  _numberProjectile: 30
   _projectileSpeed: 2
   _projectileDelay: 0.1
   _projectileAngle: 350
