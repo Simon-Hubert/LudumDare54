@@ -462,6 +462,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2687462835261161429, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3947151066220814091, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464457688471943911, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6302759891260149506, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
       propertyPath: m_Name
       value: FlameThrower
@@ -504,6 +516,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737069733259607701, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855444297541614547, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7787756314718888097, guid: 8dedb1f42f40f504c9d2bafa901cac93, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
