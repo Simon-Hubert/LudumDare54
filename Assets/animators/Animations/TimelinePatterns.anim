@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3
+    m_StopTime: 2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -52,28 +52,35 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: PlayList
+    functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: d78e31cd8384209448a05db4f0ff049a, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: acbd6a1f093dddb40ae19723dd6c6dcc, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
-    functionName: PlayList
+    functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: d78e31cd8384209448a05db4f0ff049a, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.0166667
-    functionName: PlayList
+  - time: 1.5
+    functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: acbd6a1f093dddb40ae19723dd6c6dcc, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3
-    functionName: 
+  - time: 2
+    functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
