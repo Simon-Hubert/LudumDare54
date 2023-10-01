@@ -37,7 +37,7 @@ public class BulletGenerator : MonoBehaviour
         StartCoroutine(PlayPatternCoroutine());
 
         IEnumerator PlayPatternCoroutine(){
-            float angleStep = pattern.ProjectileAngle / pattern.NumberProjectile;
+            float angleStep = pattern.ProjectileAngle / (pattern.NumberProjectile-1);
             float angle = pattern.ProjectileAngleOffset;
 
             for(int i = 0; i < pattern.NumberProjectile; i++){
