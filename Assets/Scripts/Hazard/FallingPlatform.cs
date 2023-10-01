@@ -11,6 +11,11 @@ public class FallingPlatform : MonoBehaviour
     bool m_isFalling = false;
     public bool IsFalling { get => m_isFalling; }
 
+    private void Reset()
+    {
+        m_sR = GetComponent<SpriteRenderer>();
+    }
+
     public void StartFalling() => StartCoroutine(StartFall());
     public void ResetPlatform()
     {
