@@ -21,4 +21,3 @@ MonoBehaviour:
   _compositePattern:
   - {fileID: 11400000, guid: 42812976a5b93cc4bab7bb2a1f105942, type: 2}
   - {fileID: 11400000, guid: 89a4420c90f155b44855a5c22447083a, type: 2}
-  - {fileID: 11400000, guid: a85c7323a1327e54cae7bc936adaaa79, type: 2}
