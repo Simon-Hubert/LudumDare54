@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private float _speed;
     private Vector2 _direction;
     private UnityEvent _onHit;
-    private float _lifeTime = 1.0f;
+    private float _lifeTime = 30.0f;
     private Rigidbody2D _rb;
 
     public Vector2 Direction { get => _direction; set => _direction = value; }
