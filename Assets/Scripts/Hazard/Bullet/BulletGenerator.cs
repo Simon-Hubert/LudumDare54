@@ -32,9 +32,9 @@ public class BulletGenerator : MonoBehaviour
         }
     }
 
-    // public void RandomPattern(){
+    public void RandomPattern(){
         
-    // }
+    }
 
 
     public void PlayPattern(Pattern pattern){

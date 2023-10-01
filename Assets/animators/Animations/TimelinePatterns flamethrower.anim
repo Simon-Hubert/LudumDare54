@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TimelinePatterns
+  m_Name: TimelinePatterns flamethrower
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 10
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -52,35 +52,28 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: PlayPattern
+    functionName: ActivateFlames
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: d78e31cd8384209448a05db4f0ff049a, type: 2}
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 5
+    messageOptions: 0
+  - time: 4
+    functionName: ActivateFlames
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 8
+    functionName: ActivateFlames
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: acbd6a1f093dddb40ae19723dd6c6dcc, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: d78e31cd8384209448a05db4f0ff049a, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.5
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: acbd6a1f093dddb40ae19723dd6c6dcc, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 2
-    functionName: PlayPattern
+  - time: 10
+    functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
