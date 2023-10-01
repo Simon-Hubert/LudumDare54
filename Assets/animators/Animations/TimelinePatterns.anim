@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 5.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -54,35 +54,84 @@ AnimationClip:
   - time: 0
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 5a48524cd83edb546b9a6aa7d2760272, type: 2}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.5
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 5a48524cd83edb546b9a6aa7d2760272, type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 5a48524cd83edb546b9a6aa7d2760272, type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 916b9b4dff4cd8244b451034278273b6, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.5
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 5a48524cd83edb546b9a6aa7d2760272, type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11400000, guid: 916b9b4dff4cd8244b451034278273b6, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 916b9b4dff4cd8244b451034278273b6, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 916b9b4dff4cd8244b451034278273b6, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 4.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 916b9b4dff4cd8244b451034278273b6, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: e25c5e9a09f259a40a20831cf7162f25, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
