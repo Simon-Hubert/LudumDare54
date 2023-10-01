@@ -51,6 +51,14 @@ MonoBehaviour:
   lineRenderer: {fileID: 1373066300767843921}
   m_SegmentLen: 0.7
   m_numberOfSegments: 6
+  m_collisionCircles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   DEBUG_LENGTH: 11
 --- !u!120 &1373066300767843921
 LineRenderer:
