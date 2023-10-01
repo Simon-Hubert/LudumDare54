@@ -40,11 +40,7 @@ public class FlameThrowerManager : MonoBehaviour
         else if (binary.Length == 2) binary = "00" + binary;
         else if (binary.Length == 3) binary = "0" + binary;
 
-
-
-        print(binary);
-
-        m_throwerActive = flames != 0;
+        //m_throwerActive = flames != 0;
         for(int i = 0; i < 4; i++) { m_flamesActive[i] = binary[i] == 49 ? true : false; }
 
         for (int i = 0; i < m_flamesObjects.Count; i++)
@@ -56,7 +52,7 @@ public class FlameThrowerManager : MonoBehaviour
     }
 
     public void ChangeSpeed(float value) => m_turnSpeed = value;
-
+    public void ChangeTurn(bool value) => m_throwerActive = value;
     [Button]
     void DEBUG_ACTIVE() => ActivateFlames(1);
     [Button]
