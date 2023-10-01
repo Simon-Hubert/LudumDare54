@@ -35,10 +35,19 @@ public class FlameThrowerManager : MonoBehaviour
 
         //Convertir int en binaire
         string binary = Convert.ToString(flames, 2);
+
+        if (flames == 0) binary = "0000";
+        else if (binary.Length == 1) binary = "000" + binary;
+        else if (binary.Length == 2) binary = "00" + binary;
+        else if (binary.Length == 3) binary = "0" + binary;
+
+
+
         print(binary);
 
         m_throwerActive = flames != 0;
         for(int i = 0; i < 4; i++) { m_flamesActive[i] = binary[i] == 49 ? true : false; }
+
         for (int i = 0; i < m_flamesObjects.Count; i++)
         {
             m_warningObjects[i].SetActive(binary[i] == 49 ? true : false);
@@ -46,8 +55,10 @@ public class FlameThrowerManager : MonoBehaviour
         if (flames != 0) StartCoroutine(WaitToActivate(m_activationTime));
     }
 
+    public void ChangeSpeed(float value) => m_turnSpeed = value;
+
     [Button]
-    void DEBUG_ACTIVE() => ActivateFlames(15);
+    void DEBUG_ACTIVE() => ActivateFlames(1);
     [Button]
     void DEBUG_DEACTIVE() => ActivateFlames(0);
 
