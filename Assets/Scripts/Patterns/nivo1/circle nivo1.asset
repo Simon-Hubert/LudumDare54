@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2371cafe04a0004d8cd470a8c7bef7c, type: 3}
-  m_Name: fleur2
+  m_Name: circle nivo1
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
-  _numberProjectile: 8
-  _projectileSpeed: 4
-  _projectileDelay: 0.02
-  _projectileAngle: -180
-  _projectileAngleOffset: 360
+  _projectile: {fileID: 0}
+  _numberProjectile: 16
+  _projectileSpeed: 2
+  _projectileDelay: 0
+  _projectileAngle: 360
+  _projectileAngleOffset: 0
   _compositePattern: []
