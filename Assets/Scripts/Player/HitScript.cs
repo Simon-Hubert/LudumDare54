@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class HitScript : MonoBehaviour
 {
+    [SerializeField] GameObject m_canvasGameOver;
+    bool m_isdead;
+
+    public bool IsDead {  get { return m_isdead; } }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Danger")
         {
-            //Placer code pour crever
-            Debug.Log("AIE");
+            m_isdead = true;
+            m_canvasGameOver.SetActive(true);
         }
     }
 }
