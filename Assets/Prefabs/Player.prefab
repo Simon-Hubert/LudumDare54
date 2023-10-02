@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_canvasGameOver: {fileID: 0}
+  m_sR: {fileID: 1625509718157992305}
+  m_invincibleSeconds: 1
+  m_health: 3
 --- !u!1 &3680802443247402537
 GameObject:
   m_ObjectHideFlags: 0
