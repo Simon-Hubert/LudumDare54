@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_text;
 
     [SerializeField] Slider _progressBar;
-    [SerializeField] float _totalGameTime = 4*60+30;
+    [SerializeField] float _totalGameTime = 257;
     float _timer = 0;
 
     [SerializeField] UnityEvent _onPhaseChange; //Rajouté par Simon
@@ -50,16 +50,16 @@ public class Timer : MonoBehaviour
         switch (m_phase)
         {
             case 1 :
-                m_currentTime += 120f;
+                m_currentTime += 48f;
                 break;
 
             case 2:
-                m_currentTime += 90f;
+                m_currentTime += 93f;
                 _onPhaseChange.Invoke(); //Rajouté Par Simon
                 break;
 
             case 3:
-                m_currentTime += 60f;
+                m_currentTime += 105f;
                 _onPhaseChange.Invoke(); //Rajouté Par Simon
                 break;
             case 4://Rajouté par Simon
