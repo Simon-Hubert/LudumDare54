@@ -6,8 +6,11 @@ public class HitScript : MonoBehaviour
 {
     [SerializeField] GameObject m_canvasGameOver;
     [SerializeField] SpriteRenderer m_sR;
-    [SerializeField] int InvincibleSeconds;
-    [SerializeField] int Health;
+    [SerializeField] int m_invincibleSeconds;
+    [SerializeField] int m_health;
+    public int Health { get => m_health; }
+
+
     bool m_canBeHit;
     bool m_isdead;
 
@@ -18,9 +21,9 @@ public class HitScript : MonoBehaviour
         if(collision.tag == "Danger" && m_canBeHit)
         {
             m_canBeHit = false;
-            
-            Health--;
-            if (Health == 0)
+
+            m_health--;
+            if (m_health == 0)
             {
                 m_isdead = true;
                 m_canvasGameOver.SetActive(true);
@@ -35,7 +38,7 @@ public class HitScript : MonoBehaviour
 
     IEnumerator WaitToBeHit()
     {
-        yield return new WaitForSeconds(InvincibleSeconds);
+        yield return new WaitForSeconds(m_invincibleSeconds);
         m_canBeHit = true;
         m_sR.color = new Color(1f, 1f, 1f, 1f);
     }
