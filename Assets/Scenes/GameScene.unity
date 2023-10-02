@@ -304,6 +304,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8926418938597779839, guid: 9d37bf3c0ac2bb14cb00e0f77573c0cd, type: 3}
+      propertyPath: m_blinkTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926418938597779839, guid: 9d37bf3c0ac2bb14cb00e0f77573c0cd, type: 3}
       propertyPath: m_canvasGameOver
       value: 
       objectReference: {fileID: 1913267869}

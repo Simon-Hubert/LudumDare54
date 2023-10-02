@@ -8,6 +8,7 @@ public class HitScript : MonoBehaviour
     [SerializeField] GameObject m_canvasGameOver;
     [SerializeField] SpriteRenderer m_sR;
     [SerializeField] int m_invincibleSeconds;
+    [SerializeField] float m_blinkTime;
     [SerializeField] int m_health;
 
     // Fields de Simon
@@ -41,7 +42,6 @@ public class HitScript : MonoBehaviour
             }
             else
             {
-                m_sR.color = new Color(1f, 1f, 1f, .5f);
                 StartCoroutine(WaitToBeHit());
             }
         }
@@ -49,7 +49,13 @@ public class HitScript : MonoBehaviour
 
     IEnumerator WaitToBeHit()
     {
-        yield return new WaitForSeconds(m_invincibleSeconds);
+        for(int i = 0; i < m_invincibleSeconds / m_blinkTime; i++)
+        {
+            m_sR.enabled = !m_sR.enabled;
+            yield return new WaitForSeconds(m_blinkTime);
+        }
+
+        m_sR.enabled = true;
         m_canBeHit = true;
         m_sR.color = new Color(1f, 1f, 1f, 1f);
     }
