@@ -1,16 +1,25 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI m_text;
+
+    [SerializeField] Slider _progressBar;
+    [SerializeField] float _totalGameTime = 4*60+30;
+    float _timer = 0;
 
     [SerializeField] UnityEvent _onPhaseChange; //Rajouté par Simon
     [SerializeField] UnityEvent _onWin; //Rajouté par Simon
 
     float m_currentTime;
     int m_phase;
+
+
+    // delegate void OnPhaseChangingDelegate(int phase);
+    // static OnPhaseChangingDelegate OnPhaseChanging;
 
     public int Phase { get => m_phase;} //Rajouté par Simon
 
@@ -25,7 +34,10 @@ public class Timer : MonoBehaviour
     private void FixedUpdate()
     {
         m_currentTime -= Time.fixedDeltaTime;
-        m_text.text = Mathf.RoundToInt(m_currentTime).ToString();
+        //m_text.text = Mathf.RoundToInt(m_currentTime).ToString();
+
+        _timer += Time.fixedDeltaTime;
+        _progressBar.value = _timer/_totalGameTime;
 
         if (m_currentTime <= 0f) PhaseChange();
     }
