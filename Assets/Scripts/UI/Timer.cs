@@ -12,10 +12,6 @@ public class Timer : MonoBehaviour
     float m_currentTime;
     int m_phase;
 
-
-    delegate void OnPhaseChangingDelegate(int phase);
-    static OnPhaseChangingDelegate OnPhaseChanging;
-
     public int Phase { get => m_phase;} //Rajouté par Simon
 
     private void Start()
@@ -37,7 +33,6 @@ public class Timer : MonoBehaviour
     void PhaseChange()
     {
         m_phase++;
-        //OnPhaseChanging.Invoke(m_phase);
 
         _onPhaseChange.Invoke(); //Rajouté Par Simon
         
