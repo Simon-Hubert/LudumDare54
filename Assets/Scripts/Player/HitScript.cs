@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class HitScript : MonoBehaviour
 {
-    [SerializeField] GameObject m_canvasGameOver;
     [SerializeField] SpriteRenderer m_sR;
     [SerializeField] int m_invincibleSeconds;
     [SerializeField] float m_blinkTime;
@@ -32,13 +31,11 @@ public class HitScript : MonoBehaviour
             _onHit.Invoke();//Rajouté par Simon
 
             m_health--;
-            if (m_health == 0)
+            if (m_health <= 0)
             {
                 m_isdead = true;
 
                 _onDeath.Invoke();//Rajouté par Simon
-
-                m_canvasGameOver.SetActive(true);
             }
             else
             {
