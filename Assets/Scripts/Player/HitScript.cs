@@ -32,7 +32,7 @@ public class HitScript : MonoBehaviour
             _onHit.Invoke();//Rajouté par Simon
 
             m_health--;
-            if (m_health == 0)
+            if (m_health <= 0)
             {
                 m_isdead = true;
 
