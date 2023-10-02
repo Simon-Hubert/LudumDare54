@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: m_center
       value: 
       objectReference: {fileID: 108171883}
+    - target: {fileID: 7997979190895376864, guid: 9d37bf3c0ac2bb14cb00e0f77573c0cd, type: 3}
+      propertyPath: m_moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8926418938597779839, guid: 9d37bf3c0ac2bb14cb00e0f77573c0cd, type: 3}
       propertyPath: m_canvasGameOver
       value: 
