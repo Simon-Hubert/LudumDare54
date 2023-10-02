@@ -126,7 +126,7 @@ MonoBehaviour:
   m_canvasGameOver: {fileID: 0}
   m_sR: {fileID: 1625509718157992305}
   m_invincibleSeconds: 1
-  m_numberOfBlink: 3
+  m_blinkTime: 0.1
   m_health: 3
   _onHit:
     m_PersistentCalls:

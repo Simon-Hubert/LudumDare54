@@ -13,7 +13,7 @@ public class ChainManager : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float m_SegmentLen;
     [SerializeField] private int m_numberOfSegments;
-    [SerializeField] List<GameObject> m_collisionCircles;
+    //[SerializeField] List<GameObject> m_collisionCircles;
     public int numberOfSegments { get => m_numberOfSegments; }
 
     private void Reset()
@@ -90,7 +90,7 @@ public class ChainManager : MonoBehaviour
     public void ChangeLength(int newLength)
     {
         // Création de la chaine
-        m_collisionCircles[m_numberOfSegments].SetActive(false);
+        //m_collisionCircles[m_numberOfSegments].SetActive(false);
 
         m_chainSegments.Clear();
         Vector3 chainStartPoint = m_centerPoint.position;
@@ -124,6 +124,6 @@ public class ChainManager : MonoBehaviour
         lineRenderer.positionCount = newLength + 1;
         m_numberOfSegments = newLength;
 
-        m_collisionCircles[newLength].SetActive(true);
+        //m_collisionCircles[newLength].SetActive(true);
     }
 }
