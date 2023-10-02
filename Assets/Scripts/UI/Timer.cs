@@ -46,8 +46,6 @@ public class Timer : MonoBehaviour
     {
         m_phase++;
         //OnPhaseChanging.Invoke(m_phase);
-
-        _onPhaseChange.Invoke(); //Rajouté Par Simon
         
         switch (m_phase)
         {
@@ -57,10 +55,12 @@ public class Timer : MonoBehaviour
 
             case 2:
                 m_currentTime += 90f;
+                _onPhaseChange.Invoke(); //Rajouté Par Simon
                 break;
 
             case 3:
                 m_currentTime += 60f;
+                _onPhaseChange.Invoke(); //Rajouté Par Simon
                 break;
             case 4://Rajouté par Simon
                 _onWin.Invoke();
