@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 238.48334
+    m_StopTime: 253
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -163,203 +163,259 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 55
+  - time: 65
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 57.016666
+  - time: 67.01667
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 8
     messageOptions: 0
-  - time: 60.95
+  - time: 70.95
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 67.96667
+  - time: 77.96667
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 8
     messageOptions: 0
-  - time: 72
+  - time: 82
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 75
+  - time: 85
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 30
     intParameter: 0
     messageOptions: 0
-  - time: 77.98333
+  - time: 87.98333
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 35
     intParameter: 0
     messageOptions: 0
-  - time: 81
+  - time: 91
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 40
     intParameter: 0
     messageOptions: 0
-  - time: 87.1
+  - time: 97.1
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: -40
     intParameter: 0
     messageOptions: 0
-  - time: 90
+  - time: 100
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 40
     intParameter: 0
     messageOptions: 0
-  - time: 91.05
+  - time: 101.05
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: -40
     intParameter: 0
     messageOptions: 0
-  - time: 91.53333
+  - time: 101.53333
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 40
     intParameter: 0
     messageOptions: 0
-  - time: 93.15
+  - time: 103.15
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 4
     messageOptions: 0
-  - time: 97.01667
+  - time: 107.01667
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 100.98333
+  - time: 110.98333
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 105
+  - time: 115
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 8
     messageOptions: 0
-  - time: 109
+  - time: 119
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 4
     messageOptions: 0
-  - time: 113.03333
+  - time: 123.03333
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 117
+  - time: 127
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
-  - time: 121
+  - time: 131
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 8
     messageOptions: 0
-  - time: 124.98333
+  - time: 134.98334
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 124.98333
+  - time: 134.98334
     functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 157.01666
-    functionName: ActivateFlames
+  - time: 148
+    functionName: ChangeSpeed
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 10
+    floatParameter: 30
+    intParameter: 0
     messageOptions: 0
-  - time: 159
-    functionName: ActivateFlames
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 5
-    messageOptions: 0
-  - time: 161.03334
-    functionName: ActivateFlames
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 10
-    messageOptions: 0
-  - time: 163.01668
+  - time: 148
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 5
     messageOptions: 0
-  - time: 165.03334
+  - time: 148.51666
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 40
+    intParameter: 0
+    messageOptions: 0
+  - time: 149
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 50
+    intParameter: 0
+    messageOptions: 0
+  - time: 155.03334
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -50
+    intParameter: 0
+    messageOptions: 0
+  - time: 160.01666
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 50
+    intParameter: 0
+    messageOptions: 0
+  - time: 175.08333
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -50
+    intParameter: 0
+    messageOptions: 0
+  - time: 185.15
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 40
+    intParameter: 0
+    messageOptions: 0
+  - time: 200.1
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 10
+    intParameter: 15
     messageOptions: 0
-  - time: 167.01668
+  - time: 209.98334
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -40
+    intParameter: 0
+    messageOptions: 0
+  - time: 230.01666
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 40
+    intParameter: 0
+    messageOptions: 0
+  - time: 240.05
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: -40
+    intParameter: 0
+    messageOptions: 0
+  - time: 251.28334
+    functionName: ChangeSpeed
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 251.28334
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 5
+    intParameter: 0
     messageOptions: 0
-  - time: 238.48334
+  - time: 253
     functionName: 
     data: 
     objectReferenceParameter: {fileID: 0}
