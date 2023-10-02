@@ -31,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 139.01666
+    m_StopTime: 238.01666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -933,87 +933,276 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 118.5
+  - time: 119
     functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 8d202684c74929342a8695ed276c9c86, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 120
+  - time: 120.5
     functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 615049e2cef4a364a875268e9dd36f93, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 121.5
+  - time: 122
     functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 4e976fe41757c5f4bad04a33a22e6aad, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 123
+  - time: 123.5
     functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 4e976fe41757c5f4bad04a33a22e6aad, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 124.5
+  - time: 125
     functionName: PlayPattern
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 4e976fe41757c5f4bad04a33a22e6aad, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 126
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 8d202684c74929342a8695ed276c9c86, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 127.5
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: d4db260d0d203084a9bbd3a689679d9d, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 134.98334
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 136
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 137
-    functionName: PlayPattern
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 138
     functionName: PlayPattern
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 139.01666
     functionName: PlayPattern
     data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 140.01666
+    functionName: PlayPattern
+    data: 
     objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 141.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 142.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 143.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 144.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 145
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 146
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 147
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 147.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 63067697f68223b41bd9ae5a6747b102, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 148.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 148.53334
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 2a29b0dd2e367e649aa265dcea30469a, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 149.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 149.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 1f372a0a5b1e45a4e806924c9623cf61, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 150.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 150.53334
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 1f372a0a5b1e45a4e806924c9623cf61, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 151.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 151.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 2a29b0dd2e367e649aa265dcea30469a, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 152.01666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 152.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 63067697f68223b41bd9ae5a6747b102, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 153
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 154
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 154.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee234b6ea7086f94e8e363f02bc638e8, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 155
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 155.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: c571285f82d4e90468d98aa257403e28, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 156
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 156.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee234b6ea7086f94e8e363f02bc638e8, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 157
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 157.51666
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee234b6ea7086f94e8e363f02bc638e8, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 158
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee50f1e018ba8a54bb126f20cf133f49, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 158.5
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: ee234b6ea7086f94e8e363f02bc638e8, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 159
+    functionName: PlayPattern
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 238.01666
+    functionName: 
+    data: 
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

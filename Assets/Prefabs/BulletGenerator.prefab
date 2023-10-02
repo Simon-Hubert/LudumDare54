@@ -47,8 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _testPattern: {fileID: 11400000, guid: 8c0812a6650f4784288e632f8b26ffaf, type: 2}
   _projectile: {fileID: 1947350445763356965, guid: 07716764b06d5f54fa7240f29b768f67, type: 3}
-  _patternCursor: 0
-  _playListPatterns: []
 --- !u!95 &1120828631891688435
 Animator:
   serializedVersion: 5

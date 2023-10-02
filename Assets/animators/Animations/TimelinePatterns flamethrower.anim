@@ -254,19 +254,12 @@ AnimationClip:
     floatParameter: 50
     intParameter: 0
     messageOptions: 0
-  - time: 93.03333
+  - time: 93.15
     functionName: ActivateFlames
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 4
-    messageOptions: 0
-  - time: 95
-    functionName: ChangeSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: -50
-    intParameter: 0
     messageOptions: 0
   - time: 97.01667
     functionName: ActivateFlames
@@ -316,27 +309,6 @@ AnimationClip:
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 8
-    messageOptions: 0
-  - time: 123.01667
-    functionName: ChangeSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 50
-    intParameter: 0
-    messageOptions: 0
-  - time: 125.03333
-    functionName: ChangeSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: -50
-    intParameter: 0
-    messageOptions: 0
-  - time: 127
-    functionName: ChangeSpeed
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 50
-    intParameter: 0
     messageOptions: 0
   - time: 129.05
     functionName: ChangeSpeed

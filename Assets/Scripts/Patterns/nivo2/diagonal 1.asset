@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2371cafe04a0004d8cd470a8c7bef7c, type: 3}
-  m_Name: Spirale crois
+  m_Name: diagonal 1
   m_EditorClassIdentifier: 
   _projectile: {fileID: 0}
-  _numberProjectile: 20
-  _projectileSpeed: 3
-  _projectileDelay: 0.04
-  _projectileAngle: 360
+  _numberProjectile: 0
+  _projectileSpeed: 0
+  _projectileDelay: 0
+  _projectileAngle: 0
   _projectileAngleOffset: 0
-  _compositePattern:
-  - {fileID: 11400000, guid: a66dd59d477f5d8498712655d6958405, type: 2}
+  _compositePattern: []

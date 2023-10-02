@@ -11,7 +11,7 @@ public class HitScript : MonoBehaviour
     public int Health { get => m_health; }
 
 
-    bool m_canBeHit;
+    bool m_canBeHit = true;
     bool m_isdead;
 
     public bool IsDead {  get { return m_isdead; } }

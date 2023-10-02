@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 0}
   _numberProjectile: 20
-  _projectileSpeed: 4
+  _projectileSpeed: 3
   _projectileDelay: 0.04
   _projectileAngle: -360
   _projectileAngleOffset: 180
