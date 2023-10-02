@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HitScript : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class HitScript : MonoBehaviour
     [SerializeField] SpriteRenderer m_sR;
     [SerializeField] int m_invincibleSeconds;
     [SerializeField] int m_health;
+
+    // Fields de Simon
+    [SerializeField] UnityEvent _onHit;
+    [SerializeField] UnityEvent _onDeath;
+
     public int Health { get => m_health; }
 
 
@@ -22,10 +28,15 @@ public class HitScript : MonoBehaviour
         {
             m_canBeHit = false;
 
+            _onHit.Invoke();//Rajouté par Simon
+
             m_health--;
             if (m_health == 0)
             {
                 m_isdead = true;
+
+                _onDeath.Invoke();//Rajouté par Simon
+
                 m_canvasGameOver.SetActive(true);
             }
             else

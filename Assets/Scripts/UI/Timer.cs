@@ -1,9 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI m_text;
+
+    [SerializeField] UnityEvent _onPhaseChange; //Rajouté par Simon
+    [SerializeField] UnityEvent _onWin; //Rajouté par Simon
 
     float m_currentTime;
     int m_phase;
@@ -11,6 +15,8 @@ public class Timer : MonoBehaviour
 
     delegate void OnPhaseChangingDelegate(int phase);
     static OnPhaseChangingDelegate OnPhaseChanging;
+
+    public int Phase { get => m_phase;} //Rajouté par Simon
 
     private void Start()
     {
@@ -32,6 +38,8 @@ public class Timer : MonoBehaviour
     {
         m_phase++;
         //OnPhaseChanging.Invoke(m_phase);
+
+        _onPhaseChange.Invoke(); //Rajouté Par Simon
         
         switch (m_phase)
         {
@@ -45,6 +53,9 @@ public class Timer : MonoBehaviour
 
             case 3:
                 m_currentTime += 60f;
+                break;
+            case 4://Rajouté par Simon
+                _onWin.Invoke();
                 break;
 
             default :

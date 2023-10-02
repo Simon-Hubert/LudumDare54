@@ -19,6 +19,11 @@ public class ScreenShake : MonoBehaviour
         
     }
 
+    //Rajouté par Simon
+    public void Shake(){
+        StartCoroutine(Shake(m_duree,m_force)); 
+    }
+
     IEnumerator Shake(float duration, float strenght)
     {
         Vector3 startPos = transform.position;
@@ -31,7 +36,7 @@ public class ScreenShake : MonoBehaviour
             transform.position = startPos + Random.insideUnitSphere * curve * strenght;
             yield return null;
 
-            Debug.Log(transform.position + " | " + currentTime);
+            //Debug.Log(transform.position + " | " + currentTime);
         }
 
         transform.position = startPos;
