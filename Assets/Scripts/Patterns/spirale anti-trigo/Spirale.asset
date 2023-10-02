@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Spirale
   m_EditorClassIdentifier: 
   _projectile: {fileID: 0}
-  _numberProjectile: 20
+  _numberProjectile: 16
   _projectileSpeed: 3
   _projectileDelay: 0.04
   _projectileAngle: 360
   _projectileAngleOffset: 0
-  _compositePattern:
-  - {fileID: 11400000, guid: 3b586730966ab4b4daa9d883da6d6f75, type: 2}
+  _compositePattern: []
