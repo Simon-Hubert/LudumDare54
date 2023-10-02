@@ -954,6 +954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6737069733259607701}
   - component: {fileID: 8085378977136823314}
+  - component: {fileID: 1965860320619738445}
   m_Layer: 0
   m_Name: FlameThrower
   m_TagString: Untagged
@@ -1010,6 +1011,27 @@ MonoBehaviour:
   - {fileID: 1895680729596920636}
   - {fileID: 3495950432440040192}
   - {fileID: 5602292852675949572}
+--- !u!95 &1965860320619738445
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302759891260149506}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f0180e261b522f479d6347c4e2875eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6613696311335240213
 GameObject:
   m_ObjectHideFlags: 0
