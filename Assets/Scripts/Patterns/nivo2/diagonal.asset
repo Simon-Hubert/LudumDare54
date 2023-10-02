@@ -18,4 +18,6 @@ MonoBehaviour:
   _projectileDelay: 0
   _projectileAngle: 0
   _projectileAngleOffset: 0
-  _compositePattern: []
+  _compositePattern:
+  - {fileID: 11400000, guid: 1f372a0a5b1e45a4e806924c9623cf61, type: 2}
+  - {fileID: 11400000, guid: 46f89c7d3aa032b4f8be0a4952edc34d, type: 2}
