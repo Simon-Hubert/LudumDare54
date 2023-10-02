@@ -17,11 +17,12 @@ public class MovementScript : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 moveInput = m_inputMovement.action.ReadValue<Vector2>();
-        Vector2 currentPosition = transform.position;
+        Vector3 currentPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); ;
 
-        if (moveInput != Vector2.zero && !m_hitScript.IsDead)
+        if (!m_hitScript.IsDead)
         {
-            m_rb.MovePosition(currentPosition + moveInput * m_moveSpeed * Time.deltaTime);
+            //m_rb.MovePosition(currentPosition + moveInput * m_moveSpeed * Time.deltaTime);
+            m_rb.velocity = (currentPosition - transform.position) * m_moveSpeed;
 
             //Regarde tour
             Vector2 direction = m_center.position - transform.position;
