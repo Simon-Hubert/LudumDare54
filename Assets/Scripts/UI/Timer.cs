@@ -45,7 +45,6 @@ public class Timer : MonoBehaviour
     void PhaseChange()
     {
         m_phase++;
-        //OnPhaseChanging.Invoke(m_phase);
 
         _onPhaseChange.Invoke(); //Rajouté Par Simon
         
