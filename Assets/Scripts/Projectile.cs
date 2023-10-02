@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
     private float _speed;
     private Vector2 _direction;
     private UnityEvent _onHit;
-    private float _lifeTime = 30.0f;
     private Rigidbody2D _rb;
 
     public Vector2 Direction { get => _direction; set => _direction = value; }
@@ -19,7 +18,6 @@ public class Projectile : MonoBehaviour
     }
     
     private void Start() {
-        Destroy(gameObject, _lifeTime);
         _rb.velocity = Direction * Speed;
     }
 
@@ -31,6 +29,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Player"){
             _onHit.Invoke();
+            Destroy(gameObject);
+        }
+        else if(other.gameObject.tag == "BulletWall"){
             Destroy(gameObject);
         }
     }

@@ -2,51 +2,25 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletGenerator : MonoBehaviour
 {
     [SerializeField] private Pattern _testPattern;
     [SerializeField] private GameObject _projectile;
-    [SerializeField] private int _patternCursor;
-    [SerializeField] private List<Pattern> _playListPatterns;
-
-    public int PatternCursor { 
-        get => _patternCursor;
-        set{
-            _patternCursor = value % _playListPatterns.Count;
-        }
-    }
-
-    private void Start() {
-        PatternCursor = 0;
-    }
-
-    public void PlayList(){
-        if(_playListPatterns.Count <= 0){
-            throw new ArgumentException("Playlist vide !!!");
-        }
-        else{
-            PlayPattern(_playListPatterns[PatternCursor]);
-            PatternCursor ++;
-        }
-    }
-
-    public void RandomPattern(){
-        
-    }
-
 
     public void PlayPattern(Pattern pattern){
-        StartCoroutine(PlayPatternCoroutine());
-
+        if (pattern != null) StartCoroutine(PlayPatternCoroutine());
+        
         IEnumerator PlayPatternCoroutine(){
             float angleStep = pattern.ProjectileAngle / (pattern.NumberProjectile-1);
             float angle = pattern.ProjectileAngleOffset;
-
-            foreach (Pattern compositePattern in pattern.CompositePattern)
-            {
-                PlayPattern(compositePattern);
+            if(pattern.CompositePattern.Count >= 1){
+                foreach (Pattern compositePattern in pattern.CompositePattern)
+                {
+                    PlayPattern(compositePattern);
+                }
             }
             for(int i = 0; i < pattern.NumberProjectile; i++){
                 Vector2 direction = new Vector2(Mathf.Sin(angle*Mathf.PI/180),Mathf.Cos(angle*Mathf.PI/180));
